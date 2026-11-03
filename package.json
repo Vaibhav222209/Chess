@@ -1,0 +1,38 @@
+{
+  "name": "thakur-chess-club",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "prepare:engine": "node scripts/prepare-engine.mjs",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "postinstall": "node scripts/prepare-engine.mjs"
+  },
+  "dependencies": {
+    "chess.js": "1.4.0",
+    "lucide-react": "^0.468.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "stockfish": "17.1.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^5.1.0",
+    "typescript": "~5.9.3",
+    "vite": "^7.3.1",
+    "vitest": "^4.0.18"
+  },
+  "description": "A premium local chess experience by Vaibhav Thakur, powered by Stockfish.",
+  "author": "Vaibhav Thakur",
+  "license": "GPL-3.0-only",
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}
